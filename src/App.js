@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+// src/App.js
+import React, { useState } from 'react';
+import Nav from './Navbar';
+import Home from './Home';
+import About from './About';
+import More from './MoreInfo';
+import Behavior from './BehaviorConsultation';  // <-- new page
 import './App.css';
 
 function App() {
+  const [activePage, setActivePage] = useState('home');
+
+  const renderPage = () => {
+    switch (activePage) {
+      case 'about':
+        return <About />;
+      case 'more':
+        return <More />;
+      case 'behavior':
+        return <Behavior />;   // <-- new tab
+      default:
+        return <Home />;
+    }
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nav setActivePage={setActivePage} />
+      <main>{renderPage()}</main>
     </div>
   );
 }
