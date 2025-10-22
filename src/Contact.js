@@ -8,7 +8,7 @@ function Contact() {
         I’d love to hear from you! Feel free to reach out through email or social media.
       </p>
       <ul>
-        <li>Email: example@email.com</li>
+        <li>Email: rootedinspeech@gmail.com</li>
         <li>Instagram: @yourhandle</li>
       </ul>
     </div>
