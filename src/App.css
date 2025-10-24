@@ -88,7 +88,6 @@ main {
 
 .hero-right {
   flex: 1;
-  background: url('https://images.unsplash.com/photo-1576267423445-b2e0074d68a4?w=800&h=1200&fit=crop') center/cover;
 }
 
 /* === Quadrant Section === */
