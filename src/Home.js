@@ -1,5 +1,7 @@
 import React from 'react';
-import baby from './images/baby.jpg'; 
+import baby from './images/baby.jpg';
+import flowers1 from './images/flowers1.png';
+import flowers2 from './images/flowers2.png';
 
 export default function Home() {
   return (
@@ -26,10 +28,18 @@ export default function Home() {
           <div className="phrase">
             "Providing services in the home, at libraries, or in private schools"
           </div>
-          <div className="flowers">🌸 🌺 🌼</div>
+          <img
+            src={flowers1}
+            alt="flowers decorative"
+            className="flowers-image"
+          />
         </div>
         <div className="quadrant-right">
-          <div className="flowers">🌻 🌷 🌹</div>
+          <img
+            src={flowers2}
+            alt="flowers decorative"
+            className="flowers-image"
+          />
           <div className="phrase">
             "Committed to providing well-rounded approaches of therapy for the child"
           </div>

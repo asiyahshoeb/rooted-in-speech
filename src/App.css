@@ -34,7 +34,7 @@ body {
 }
 
 .logo {
-  height: 80px;
+  height: 100px;
   cursor: pointer;
 }
 
@@ -116,6 +116,13 @@ main {
   max-width: 600px;
   line-height: 1.5;
 }
+
+.flowers-image {
+  width: 120px;
+  height: auto;
+  margin: 1rem 0;
+}
+
 
 .flowers {
   font-size: 48px;
