@@ -1,5 +1,5 @@
 import React from 'react';
-import heroImg from '../images/baby.jpg'; // ✅ local image
+import baby from './images/baby.jpg'; 
 
 export default function Home() {
   return (
