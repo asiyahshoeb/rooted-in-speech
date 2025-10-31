@@ -1,9 +1,7 @@
 import React from 'react';
 import baby from './images/baby.jpg';
-import flowers1 from './images/flowers1.png';
-import flowers2 from './images/flowers2.png';
 
-export default function Home() {
+export default function Home({ onNavigate }) {
   return (
     <div className="home-page">
       {/* Hero Section */}
@@ -22,38 +20,21 @@ export default function Home() {
         ></div>
       </section>
 
-      {/* Quadrant Section */}
-      <section className="quadrant-section">
-        <div className="quadrant-left">
-          <div className="phrase">
-            "Providing services in the home, at libraries, or in private schools"
-          </div>
-          <img
-            src={flowers1}
-            alt="flowers decorative"
-            className="flowers-image"
-          />
-        </div>
-        <div className="quadrant-right">
-          <img
-            src={flowers2}
-            alt="flowers decorative"
-            className="flowers-image"
-          />
-          <div className="phrase">
-            "Committed to providing well-rounded approaches of therapy for the child"
-          </div>
+      <section className="home-more-section">
+        <div className="home-more-content">
+          <p>We provide home-based speech therapy services at the client's home or at the local library.</p>
+          <button className="info-button" onClick={() => onNavigate('more')}>More Information</button>
         </div>
       </section>
 
       {/* Contact Section */}
       <section className="contact-section">
         <div className="contact-message">
-          Contact me for any advice! No question is too small
+          Contact Us
         </div>
         <div className="contact-boxes">
           <div className="contact-box">contact@rootedinspeech.com</div>
-          <div className="contact-box">(555) 123-4567</div>
+          <div className="contact-box">(260) 446-5562</div>
         </div>
       </section>
     </div>

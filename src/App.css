@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 /* === Global Reset === */
 * {
   margin: 0;
@@ -6,13 +9,13 @@
 }
 
 :root {
-  --beige: #e6dad1;
-  --sage: #7a9370;
+  --beige: #dad7cd;
+  --sage: #a3b18a;
   --purple: #4A1A4A;
 }
 
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   overflow-x: hidden;
   background-color: var(--beige);
   color: var(--purple);
@@ -78,55 +81,49 @@ main {
 }
 
 .hero-title {
-  font-size: 72px;
+  font-size: 80px;
   font-weight: bold;
   color: var(--purple);
   letter-spacing: 2px;
   line-height: 1.2;
   text-align: center;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .hero-right {
   flex: 1;
 }
 
-/* === Quadrant Section === */
-.quadrant-section {
+.home-more-section {
   background: var(--sage);
   height: 80vh;
-  display: flex;
-}
-
-.quadrant-left,
-.quadrant-right {
-  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 80px 60px;
-}
-
-.phrase {
-  font-size: 30px;
-  font-weight: bold;
-  color: var(--purple);
+  padding: 40px;
+  color: black;
   text-align: center;
-  margin-bottom: 30px;
-  max-width: 600px;
-  line-height: 1.5;
 }
 
-.flowers-image {
-  width: 120px;
-  height: auto;
-  margin: 1rem 0;
+.home-more-content p {
+  font-size: 38px; /* Increased font size */
+  font-weight: bold;
+  max-width: 800px;
+  line-height: 1.6;
+  margin-bottom: 40px; /* Space between text and button */
 }
 
-
-.flowers {
-  font-size: 48px;
-  margin-top: 30px;
+.info-button {
+  background-color: white;
+  color: var(--purple);
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 /* === Contact Section === */
@@ -178,97 +175,33 @@ main {
 }
 
 /* === About Page === */
-.about-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: calc(100vh - 140px);
-  padding: 80px 20px;
-  background: var(--beige);
-}
-
-.about-oval {
-  background: var(--sage);
-  border-radius: 50%;
-  width: 90%;
-  max-width: 1200px;
-  padding: 80px 120px;
-  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
-}
-
-.about-title {
-  font-size: 54px;
-  font-weight: bold;
-  color: var(--purple);
-  margin-bottom: 40px;
-  text-align: center;
-}
-
-.about-text {
-  font-size: 20px;
-  line-height: 1.8;
-  color: var(--purple);
-  text-align: center;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-/* === ABOUT PAGE === */
 .about-page {
   background: var(--beige);
-  min-height: 100vh;
+  min-height: calc(100vh - 120px); /* Adjust for navbar height */
+  padding: 100px 110px 100px 150px; /* top, right, bottom, left padding */
   display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: visible;      /* allow circle to extend beyond page edges */
-  position: relative;
-  padding-bottom: 100px;  /* extra space at bottom */
+  justify-content: flex-start; /* Align content to the left */
+  align-items: flex-start; /* Align content to the top */
 }
 
-
-.about-container {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: 120px 40px;
-  z-index: 2;
-}
-
-.about-oval {
-  background: var(--sage);
-  border-radius: 50%;
-  width: 800%;         /* stretch further horizontally */
-  height: 130vh;       /* keep vertical height for bottom space */
-  position: absolute;
-  top: 1vh;           /* keep it lower */
-  left: 50%;
-  transform: translateX(-50%);  /* keeps it centered */
-  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
-  z-index: 1;
-}
-
-
-.about-title,
-.about-text {
-  position: relative;
-  z-index: 3;
-  color: var(--purple);
-  text-align: center;
+.about-content {
+  max-width: 700px; /* Set a max-width for the content area */
 }
 
 .about-title {
-  font-size: 54px;
+  font-size: 30px; /* Made title smaller */
   font-weight: bold;
+  color: var(--purple);
   margin-bottom: 40px;
+  text-align: left; /* Align title to the left */
 }
 
-.about-text {
-  max-width: 900px;
-  font-size: 20px;
+.about-content p {
+  font-size: 18px; /* Made paragraph font bigger */
   line-height: 1.8;
-  margin: 0 auto;
-  padding: 0 40px;
+  color: var(--purple);
+  text-align: left;
+  margin-bottom: 1.5em; /* Add space between paragraphs */
 }
 
 /* === FAQ Section (More Page) === */
@@ -383,8 +316,20 @@ main {
 .behavior-page {
   background: var(--beige);
   min-height: 100vh;
-  padding: 140px 40px;
+  padding: 0; /* Remove padding to allow banner to be full width */
   color: var(--purple);
+}
+
+.behavior-banner {
+  width: 100%;
+  height: 60vh; /* 40% of the viewport height */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.behavior-text-content {
+  padding: 60px 40px; /* Add padding to the text area instead */
 }
 
 .behavior-title {
@@ -394,9 +339,10 @@ main {
   text-align: center;
 }
 
-.behavior-content {
+.behavior-content p {
   max-width: 900px;
   margin: 0 auto;
   font-size: 18px;
   line-height: 1.8;
+  margin-bottom: 1.5em;
 }

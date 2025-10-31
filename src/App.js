@@ -19,7 +19,7 @@ function App() {
       case 'behavior':
         return <Behavior />;   // <-- new tab
       default:
-        return <Home />;
+        return <Home onNavigate={setActivePage} />;
     }
   };
 
