@@ -241,7 +241,7 @@ main {
 .faq-question {
   padding: 25px 30px;
   background: var(--sage);
-  color: var(--purple);
+  color: black;
   font-weight: bold;
   font-size: 20px;
   cursor: pointer;
